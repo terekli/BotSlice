@@ -13,6 +13,17 @@ The code takes in standard STL file as input, and generate contours at each slic
 A figure is generated for the contour at each layer, showcasing all the edge points of the model and relationship between edge points.
 
 ## Demo
+Rendered illustration of a grid structure STL input with 1 mm thickness:
+
+![Rendered illustration of a grid structure STL input with 1 mm thickness:](/stl_model.png)
+
+Sliced contour of the first layer at z=0:
+
+![Sliced contour of the first layer at z=0](/layer_1.png)
+
+Sliced contour of the second layer at z=0.5:
+
+![Sliced contour of the second layer at z=0.5](/layer_2.png)
 
 
 ## Run the Code
