@@ -6,7 +6,7 @@ For more information about DIW please refer to the following published paper:
 * Li, T.& Naguib, H. E. et al (2023). Additive Manufacturing, 74.  
 * Li, T. & Naguib, H. E. et al (2023). Nano Energy, 108909  
 
-This software is continously under development,if you observed any bug or have suggetions for improvement, feel free to reach out to me at: https://www.linkedin.com/in/terekli/
+This software is continously under development, if you observed any bug or have suggetions for improvement, feel free to reach out to me at: https://www.linkedin.com/in/terekli/
 
 ## Current State
 The code takes in standard STL file as input, and generate contours at each slicing layer defined by another layer_thickness input.
