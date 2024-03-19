@@ -10,7 +10,7 @@ This software is continously under development, if you observed any bug or have 
 
 ## Current State
 The code takes in standard STL file as input, and generate contours at each slicing layer defined by another layer_thickness input.
-A figure is generated for the contour at each layer, showcasing all the edge points of the model and relationship between edge points.
+A figure is generated for each sliced layer, showcasing all the individual closed contours.
 
 ## Demo
 Rendered illustration of a grid structure STL input with 1 mm thickness:
