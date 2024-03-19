@@ -1,3 +1,5 @@
+########## START OF rotate ##########
+
 def rotate(model, axis, theta_degrees):
     
     import numpy as np
@@ -35,7 +37,14 @@ def rotate(model, axis, theta_degrees):
     model.vectors = np.dot(model.vectors.reshape(-1, 3), rot_matrix.T).reshape(-1, 3, 3)
     
     return model
+
+########## END OF rotate ##########
+
     
+
+
+########## START OF optimal_orientation ##########
+
 def optimal_orientation(model):
     
     # still under work
@@ -55,6 +64,12 @@ def optimal_orientation(model):
     # No need to rotate if Z is the highest since we assume Z is already aligning with the XY plane
         
     return model
+
+########## END OF optimal_orientation ##########
+
+
+
+########## START OF translate_to_origin ##########
 
 def translate_to_origin(model):
     
@@ -81,3 +96,5 @@ def translate_to_origin(model):
             model.points[i][j*3:j*3+3] -= translation
     
     return model
+
+########## END OF translate_to_origin ##########
