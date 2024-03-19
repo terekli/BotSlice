@@ -19,7 +19,7 @@ Rendered illustration of a grid structure STL input with 1 mm thickness:
 
 Sliced contour of the fifth layer, each closed contours are shown in unique color:
 
-![Slice layer showing individual contours:]()
+![Slice layer showing individual contours:](/individual_contour.png)
 
 
 ## Run the Code
