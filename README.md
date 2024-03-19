@@ -17,13 +17,9 @@ Rendered illustration of a grid structure STL input with 1 mm thickness:
 
 ![Rendered illustration of a grid structure STL input with 1 mm thickness:](/stl_model.png)
 
-Sliced contour of the first layer at z=0:
+Sliced contour of the fifth layer, each closed contours are shown in unique color:
 
-![Sliced contour of the first layer at z=0](/layer_1.png)
-
-Sliced contour of the second layer at z=0.5:
-
-![Sliced contour of the second layer at z=0.5](/layer_2.png)
+![Slice layer showing individual contours:]()
 
 
 ## Run the Code
