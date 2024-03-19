@@ -1,3 +1,5 @@
+########## START OF generate_start_gcode ##########
+
 def generate_start_gcode(gcode):
 
     # write in gcode to initiate a print
@@ -23,7 +25,11 @@ def generate_start_gcode(gcode):
     
     return gcode
 
-##############################################################################
+########## END OF generate_start_gcode ##########
+
+
+
+########## START OF generate_end_gcode ##########
 
 def generate_end_gcode(gcode):
 
@@ -43,7 +49,11 @@ def generate_end_gcode(gcode):
 
     return gcode
 
-##############################################################################
+########## END OF generate_end_gcode ##########
+
+
+
+########## START OF save_gcode ##########
 
 def save_gcode(gcode, output_name):
     
@@ -52,3 +62,5 @@ def save_gcode(gcode, output_name):
     with open(output_name, 'w') as f:
         for line in gcode:
             f.write("%s\n" % line)
+            
+########## END OF save_gcode ##########
