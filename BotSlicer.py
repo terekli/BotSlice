@@ -4,16 +4,21 @@ def BotSlice(filename, layer_thickness, line_width, gantry_speed):
     from stl import mesh
     
     from visualize import visualize_before_slicing
-    from visualize import visualize_contour
+    from visualize import visualize_contours
+    from visualize import visualize_pairs
+    from visualize import visualize_map
+
+    from manipulate import rotate
+    from manipulate import translate_to_origin
     
-    from mesh_manipulator import rotate
-    from mesh_manipulator import translate_to_origin
+    from layer import get_edge_points
+    from layer import build_contours
+    from layer import build_map
     
-    from get_edge_points import get_edge_points
-    from create_contour import build_contours
+    from gcode import generate_start_gcode
+    from gcode import generate_end_gcode
     
-    from generate_gcode import generate_start_gcode
-    from generate_gcode import generate_end_gcode
+    # from temp import build_contours
     
     # Initiate GCode
     gcode = []
@@ -34,7 +39,7 @@ def BotSlice(filename, layer_thickness, line_width, gantry_speed):
     
     model.dimension = model.max_ - model.min_
     
-    visualize_before_slicing(model)
+    # visualize_before_slicing(model)
 
     # Calculate how many layers to print
     total_layers = int(np.round(model.dimension[2] / layer_thickness, 0))
@@ -49,11 +54,19 @@ def BotSlice(filename, layer_thickness, line_width, gantry_speed):
         # Calculate edge points at the current slice plane
         connected_points, normal_vector = get_edge_points(model, current_layer_height)
 
+        # Visualize_pairs(connected_points, current_layer)
+
         # Organize the connected points into contour
-        contour = build_contours(connected_points)
+        contours, normal_vector_contour = build_contours(connected_points, normal_vector)
         
         # Visualize the sliced contour
-        visualize_contour(contour, current_layer)
+        # visualize_contours(contours, current_layer)
+
+        # Create Binary Map
+        map = build_map(contours, normal_vector_contour, line_width)
+
+        # Visualize
+        visualize_map(map)
         
         current_layer += 1   
         
