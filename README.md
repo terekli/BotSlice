@@ -11,6 +11,7 @@ This software is continously under development, if you observed any bug or have 
 ## Current State
 The code takes in standard STL file as input, and generate contours at each slicing layer defined by another layer_thickness input.
 A figure is generated for each sliced layer, showcasing all the individual closed contours.
+Normal vector is then used to create a matrix map, identifying the solid geometry.
 
 ## Demo
 Rendered illustration of a grid structure STL input with 1 mm thickness:
@@ -20,6 +21,9 @@ Rendered illustration of a grid structure STL input with 1 mm thickness:
 Sliced contour of the fifth layer, each closed contours are shown in unique color:
 
 ![Slice layer showing individual contours:](/individual_contour.png)
+
+Sliced layer map, 1 represents solid:
+![Slice layer showing solid geometry:](/layer_map.png)
 
 
 ## Run the Code
